@@ -1,6 +1,6 @@
 import React from 'react';
 import { vopInfo } from '../data/vopData';
-import { Mail, Globe, Send } from 'lucide-react'; // Заменили Facebook на Globe
+import { Mail, Globe} from 'lucide-react'; // Заменили Facebook на Globe
 
 export const Footer: React.FC = () => {
   return (
