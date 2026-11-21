@@ -8,7 +8,7 @@ export const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-24 bg-slate-50 text-slate-900 border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Заголовок секции */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Наші проєкти та ініціативи</h2>
@@ -22,11 +22,21 @@ export const Projects: React.FC = () => {
           {vopInfo.projects.map((project, index) => {
             const IconComponent = projectIcons[index % projectIcons.length];
             return (
-              <div 
+              <div
                 key={project.id}
                 className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
+                  {project.image && (
+                    <div className="mb-6 overflow-hidden rounded-2xl border border-slate-100 aspect-video bg-slate-100">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
                       <IconComponent size={28} />
@@ -60,9 +70,9 @@ export const Projects: React.FC = () => {
                   )}
                   {project.telegramUrl && (
                     <div className="pt-2">
-                      <a 
-                        href={project.telegramUrl} 
-                        target="_blank" 
+                      <a
+                        href={project.telegramUrl}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
                       >

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { vopInfo } from '../data/vopData';
 
-export const Header: React.FC = () => {
+export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -37,7 +37,7 @@ export const Header: React.FC = () => {
             href="#join"
             className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-xl transition-all shadow-sm hover:shadow-md"
           >
-            Долучитися
+            Написати нам
           </a>
         </div>
 
@@ -86,7 +86,7 @@ export const Header: React.FC = () => {
             onClick={() => setIsOpen(false)}
             className="block text-center bg-blue-600 text-white font-medium py-2.5 rounded-xl mt-4"
           >
-            Долучитися
+            Написати нам
           </a>
         </div>
       )}

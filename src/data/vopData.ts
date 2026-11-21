@@ -2,9 +2,11 @@ export interface ProjectItem {
   id: string;
   title: string;
   description: string;
+  image?: string;
   schedule?: string;
   location?: string;
   telegramUrl?: string;
+  facebookUrl?: string;
 }
 
 export const vopInfo = {
@@ -26,6 +28,7 @@ export const vopInfo = {
       id: "philosophy-club",
       title: "Філософський клуб «Філософія як спосіб життя»",
       description: "Простір для спільного дослідження філософських ідей, діалогу й осмислення того, як філософія може допомагати жити більш усвідомлено, наповнено та змістовно.",
+      image: "/public/project-1.jpg",
       schedule: "Щосуботи об 11:00",
       location: "Бібліотека імені М. Грушевського (вул. Троїцька / Преображенська)",
       telegramUrl: "https://t.me/odesastoics"
@@ -34,6 +37,7 @@ export const vopInfo = {
       id: "lab",
       title: "Відкрита мережева лабораторія дослідження багатовимірності людини (ЛаБ)",
       description: "Простір дослідження багатовимірності людини та її буття. Лабораторний формат передбачає спільну дослідницьку роботу та обмін напрацюваннями.",
+      image: "/public/project-2.jpg",
       location: "Онлайн / Мережевий формат",
       facebookUrl: "https://www.facebook.com/share/1EsEqGSwE3/"
     },
@@ -41,14 +45,16 @@ export const vopInfo = {
       id: "communication-space",
       title: "«Комунікативний майданчик»",
       description: "Простір зустрічей для спільного пошуку й обговорення важливих та цікавих тем буття сучасної людини.",
+      image: "/public/project-3.jpg",
       schedule: "Останній четвер місяця о 18:00",
       location: "Книгарня-кав'ярня «Паперове життя» (вул. Грецька, 7)",
       telegramUrl: "https://t.me/+k7vtA6MVrSY5ZmUy"
     },
     {
       id: "razom",
-      title: "«РАЗОМ: від ідеи до реалізації»",
-      description: "Ініціатива, спрямована на підтримку освітніх і соціальних ідей та допомогу в їхньому втіленні в життя."
+      title: "«РАЗОМ: від ідеї до реалізації»",
+      description: "Ініціатива, спрямована на підтримку освітніх і соціальних ідей та допомогу в їхньому втіленні в життя.",
+      image: "/public/project-4.jpg",
     }
   ]
 };

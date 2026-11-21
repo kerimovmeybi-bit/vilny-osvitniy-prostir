@@ -1,14 +1,9 @@
-import React from 'react';
-import { ArrowRight, Sparkles, Users } from 'lucide-react';
+import { ArrowRight, Users } from 'lucide-react';
 import { vopInfo } from '../data/vopData';
 
-export const Hero: React.FC = () => {
+export const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-slate-900 text-white py-24 lg:py-32">
-      {/* 
-        Здесь в качестве фона можно подключить обложку из файлов:
-        <div className="absolute inset-0 opacity-30 bg-cover bg-center" style={{ backgroundImage: `url('/path-to-cover.png')` }} />
-      */}
+    <section className="relative overflow-hidden bg-slate-900 text-white py-20 lg:py-28">
       <div className="absolute inset-0 bg-gradient-to-b from-blue-950/80 via-slate-900/90 to-slate-900 z-0" />
 
       {/* Glow effects */}
@@ -17,10 +12,13 @@ export const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-300 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full border border-blue-400/30 backdrop-blur-md">
-            <Sparkles size={16} className="text-blue-400" />
-            <span>Громадська організація • ВОП</span>
+          {/* Логотип замість бейджа */}
+          <div className="flex justify-center">
+            <img
+              src="/logo.png"
+              alt={vopInfo.name}
+              className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover bg-white p-1 shadow-xl shadow-blue-950/60 ring-2 ring-blue-400/40"
+            />
           </div>
 
           {/* Title */}
